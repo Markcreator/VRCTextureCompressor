@@ -5,7 +5,7 @@
   "description": "A background script that automatically handles texture compression so that VRChat avatars always upload small and optimized.",
   "gitDependencies": {},
   "vpmDependencies": {
-    "com.vrchat.avatars": "3.1.13"
+    "com.vrchat.avatars": "3.x.x"
   },
   "legacyFolders": {},
   "legacyFiles": {},
