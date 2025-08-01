@@ -78,11 +78,11 @@ public static class VRCTextureCompressor
                                 {
                                     bool changed = false;
 
-                                    /*if (textureImporter.crunchedCompression != true)
+                                    if (textureImporter.crunchedCompression == true)
                                     {
-                                        if (pass == Pass.Execution) textureImporter.crunchedCompression = true;
+                                        if (pass == Pass.Execution) textureImporter.crunchedCompression = false;
                                         changed = true;
-                                    }*/
+                                    }
                                     if (textureImporter.textureCompression != TextureImporterCompression.Compressed)
                                     {
                                         if (pass == Pass.Execution) textureImporter.textureCompression = TextureImporterCompression.Compressed;
@@ -91,6 +91,26 @@ public static class VRCTextureCompressor
                                     if (textureImporter.compressionQuality != 100)
                                     {
                                         if (pass == Pass.Execution) textureImporter.compressionQuality = 100;
+                                        changed = true;
+                                    }
+                                    if (textureImporter.mipmapEnabled == false)
+                                    {
+                                        if (pass == Pass.Execution) textureImporter.mipmapEnabled = true;
+                                        changed = true;
+                                    }
+                                    if (textureImporter.streamingMipmaps == false)
+                                    {
+                                        if (pass == Pass.Execution) textureImporter.streamingMipmaps = true;
+                                        changed = true;
+                                    }
+                                    if (textureImporter.filterMode != FilterMode.Trilinear)
+                                    {
+                                        if (pass == Pass.Execution) textureImporter.filterMode = FilterMode.Trilinear;
+                                        changed = true;
+                                    }
+                                    if (textureImporter.mipmapFilter != TextureImporterMipFilter.KaiserFilter)
+                                    {
+                                        if (pass == Pass.Execution) textureImporter.mipmapFilter = TextureImporterMipFilter.KaiserFilter;
                                         changed = true;
                                     }
 
